@@ -1,0 +1,38 @@
+// functions.scss
+
+// Función para convertir de píxeles a em
+@function px-to-em($value, $base-font-size: 14px) {
+  @return $value / $base-font-size * 1em;
+}
+
+// Función para convertir de píxeles a rem
+@function px-to-rem($value, $base-font-size: 14px) {
+  @return $value / $base-font-size * 1rem;
+}
+
+// Función para calcular el porcentaje de un valor en relación a otro
+@function percentage($value, $total) {
+  @return ($value / $total) * 100%;
+}
+
+// Función para calcular el valor de luminosidad de un color
+@function luminance($color) {
+  @return 0.2126 * red($color) + 0.7152 * green($color) + 0.0722 * blue($color);
+}
+
+// Función para aplicar shade a un color de fondo
+@function apply-shade($color, $opacity: 0.5) {
+  @return rgba($color, $opacity);
+}
+
+// Función para aplicar un box-shadow
+@function apply-box-shadow(
+  $x-offset,
+  $y-offset,
+  $blur-radius,
+  $spread-radius,
+  $color,
+  $opacity: 1
+) {
+  @return $x-offset $y-offset $blur-radius $spread-radius rgba($color, $opacity);
+}

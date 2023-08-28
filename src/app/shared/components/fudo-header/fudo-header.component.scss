@@ -1,0 +1,28 @@
+@import "components/button";
+@import "abstracts/colors";
+@import "abstracts/icons";
+@import "abstracts/variables";
+@import "abstracts/functions";
+
+.fudo-header {
+  background: $color-white;
+  box-shadow: apply-box-shadow(0px, 2px, 5px, 0px, $color-black, 0.2);
+  height: $height-header;
+  padding: 0 24px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.fudo-header-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.fudo-logo {
+  &__img-logo {
+    width: 32px;
+    height: 32px;
+  }
+}

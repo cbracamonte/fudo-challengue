@@ -1,0 +1,14 @@
+$height-header: 64px;
+$margin-main: 24px;
+
+$screen-xs: 320px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$mq-xs: "screen and (min-width: #{$screen-xs})";
+$mq-sm: "screen and (min-width: #{$screen-sm})";
+$mq-md: "screen and (min-width: #{$screen-md})";
+$mq-lg: "screen and (min-width: #{$screen-lg})";
+$mq-xl: "screen and (min-width: #{$screen-xl})";
