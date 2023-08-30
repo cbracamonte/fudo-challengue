@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
-    "build-gh-pages": "ng deploy --base-href=https://cbracamonte.github.io/fudo-challengue/",
+    "build-gh-pages": "ng deploy --repo=https://github.com/cbracamonte/fudo-challengue.git",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
@@ -42,9 +42,12 @@
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
+    "angular-cli-ghpages": "1.0.6",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.3",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -53,8 +56,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1",
-    "typescript": "~5.1.3",
-    "husky": "^8.0.3",
-    "git-cz": "^4.9.0"
+    "typescript": "~5.1.3"
   }
 }
