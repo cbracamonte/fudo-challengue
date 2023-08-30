@@ -2,6 +2,12 @@
 
 Una app de noticias consumiendo el API <https://newsapi.org/>
 
+
+## DEMO
+Visiten: <https://fudo-challengue.vercel.app/news>
+
+-Nota: La API de newsapi.org solo acepta peticiones en entorno de desarrollo (localhost) por lo que se mockeo la data para mostrar la información.
+
 ## Tabla de Contenidos
 
 - [Introducción](#introducción)
