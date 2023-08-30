@@ -1,18 +1,14 @@
-@import "abstracts/variables";
+@import 'abstracts/variables';
+@import 'abstracts/colors';
 
-@mixin fudo-card($max-width: 400px) {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
+@mixin fudo-card() {
+  background-color: $color-giants-orange;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: 10px;
-  max-width: $max-width;
-  width: 100%;
-
-  @media #{$mq-md} {
-    flex-direction: row;
-    padding: 20px;
-  }
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  color: $color-white;
 }

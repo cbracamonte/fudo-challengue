@@ -1,8 +1,9 @@
-@import "components/button";
-@import "abstracts/colors";
-@import "abstracts/icons";
-@import "abstracts/variables";
-@import "abstracts/functions";
+@import 'components/button';
+@import 'abstracts/colors';
+@import 'abstracts/icons';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
 
 .fudo-header {
   background: $color-white;
@@ -13,16 +14,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 1;
 }
 .fudo-header-wrapper {
   display: flex;
   height: 100%;
   align-items: center;
+  gap: 1em;
 }
 .fudo-logo {
   &__img-logo {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
+  }
+}
+.fudo-header-menu-toggle {
+  @include fudo-icon-button();
+  display: none;
+
+  @include small {
+    display: block;
   }
 }

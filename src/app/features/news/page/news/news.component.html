@@ -1,1 +1,11 @@
-<p>news works!</p>
+<section class="fudo-card-container">
+  <ng-container *ngIf="news$ | async as news; else loadingOrNoData">
+    <app-fudo-news-card
+      *ngFor="let article of news.articles"
+      [article]="article"></app-fudo-news-card>
+  </ng-container>
+</section>
+<ng-template #loadingOrNoData>
+  <div *ngIf="loading; else noData">Loading...</div>
+  <ng-template #noData>No hay noticias disponibles.</ng-template>
+</ng-template>

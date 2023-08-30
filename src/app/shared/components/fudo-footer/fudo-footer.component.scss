@@ -1,0 +1,20 @@
+@import 'abstracts/colors';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+.fudo-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footer-width;
+  background-color: $color-dark-charcoal;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.fudo-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

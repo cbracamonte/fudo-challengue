@@ -1,3 +1,5 @@
+@import 'abstracts/variables';
+
 @mixin box-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -7,4 +9,34 @@
 @mixin backface-visibility($value) {
   backface-visibility: $value;
   -webkit-backface-visibility: $value;
+}
+
+@mixin extra-small {
+  @media only screen and (max-width: $extra-small-screen) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: $small-screen) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: $medium-screen) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin extra-large {
+  @media only screen and (max-width: $extra-large-screen) {
+    @content;
+  }
 }

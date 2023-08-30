@@ -1,0 +1,33 @@
+<section class="fudo-accordion-wrapper" *ngIf="isOpenMenu">
+  <header class="fudo-accordion-header">
+    <a class="fudo-accordion-header-link" routerLink="/home">
+      <h1 class="fudo-accordion-header-link__title">Fudo News</h1>
+    </a>
+    <button
+      class="fudo-header-accordion-close"
+      type="button"
+      (click)="closeMenu.emit(false)">
+      <i class="fudo-icon-close"></i>
+    </button>
+  </header>
+  <nav role="navigation" class="fudo-accordion-nav">
+    <ul class="fudo-accordion-menu">
+      <li class="fudo-accordion-items">
+        <a
+          class="fudo-accordion-items__text"
+          routerLink="/home"
+          (click)="closeMenu.emit(false)"
+          >Home</a
+        >
+      </li>
+      <li class="fudo-accordion-items">
+        <a
+          class="fudo-accordion-items__text"
+          routerLink="/news"
+          (click)="closeMenu.emit(false)"
+          >Noticias</a
+        >
+      </li>
+    </ul>
+  </nav>
+</section>

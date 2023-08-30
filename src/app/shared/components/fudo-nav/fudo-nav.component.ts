@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './fudo-nav.component.html',
-  styleUrls: ['./fudo-nav.component.scss']
+  styleUrls: ['./fudo-nav.component.scss'],
 })
-export class FudoNavComponent {
-
-}
+export class FudoNavComponent {}

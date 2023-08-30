@@ -1,0 +1,59 @@
+#!/bin/sh
+
+pass=true
+RED='\033[1;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo "Running Linters:"
+
+# Run tslint and get the output and return code
+tslint=$(npm run lint)
+ret_code=$?
+
+# If it didn't pass, announce it failed and print the output
+if [ $ret_code != 0 ]; then
+  printf "\n${RED}tslint failed:${NC}"
+  echo "$tslint\n"
+  pass=false
+else
+  printf "${GREEN}tslint passed.${NC}\n"
+fi
+
+# Run lintFix and get the output and return code
+lintFix=$(npm run lintFix)
+ret_code=$?
+
+if [ $ret_code != 0 ]; then
+  printf "${RED}lintFix failed:${NC}"
+  echo "$lintFix\n"
+  pass=false
+else
+  printf "${GREEN}lintFix passed.${NC}\n"
+fi
+
+# Run prettyFix and get the output and return code
+prettyFix=$(npm run prettyFix)
+ret_code=$?
+
+if [ $ret_code != 0 ]; then
+  printf "${RED}prettyFix failed:${NC}"
+  echo "$prettyFix\n"
+  pass=false
+else
+  printf "${GREEN}prettyFix passed.${NC}\n"
+fi
+
+# Check for instances of console.log
+console_log_count=$(grep -r "console\.log" src/ | wc -l)
+if [ $console_log_count -gt 0 ]; then
+  printf "${RED}Found $console_log_count instances of console.log.${NC}\n"
+  pass=false
+fi
+
+# If there were no failures, it is good to commit
+if $pass; then
+  exit 0
+fi
+
+exit 1

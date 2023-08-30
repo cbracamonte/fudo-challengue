@@ -1,7 +1,8 @@
-@import "abstracts/variables";
+@import 'abstracts/variables';
 
 .fudo-main {
   margin-top: $height-header + $margin-main;
   margin-left: $margin-main;
   margin-right: $margin-main;
+  margin-bottom: $footer-width + $margin-main;
 }

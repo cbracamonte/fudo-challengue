@@ -1,0 +1,30 @@
+@import 'abstracts/colors';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.fudo-nav {
+  display: block;
+  margin-right: 16px;
+
+  @include small {
+    display: none;
+  }
+}
+.fudo-menu {
+  display: flex;
+  gap: 2em;
+  padding-left: 0;
+}
+.fudo-menu-list {
+  display: flex;
+  gap: 1em;
+  &__link {
+    color: $color-giants-orange;
+    text-decoration: none;
+  }
+}
+.fudo-menu-list-link {
+  &__text {
+    color: $color-giants-orange;
+  }
+}

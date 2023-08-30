@@ -1,0 +1,30 @@
+<article class="fudo-card">
+  <a [href]="article.url" target="_blank">
+    <div class="fudo-card-header">
+      <img
+        class="fudo-card-header__image"
+        [src]="article.urlToImage"
+        alt="Detailed image description would go here." />
+    </div>
+    <div class="fudo-card-body">
+      <p class="fudo-card-body__title">
+        {{ article.title }}
+      </p>
+      <div class="fudo-card-info">
+        <p class="fudo-card-info__text">{{ article.description }}</p>
+      </div>
+      <div class="fudo-card-author">
+        <div class="fudo-card-author-avatar">
+          <img
+            class="fudo-card-author-avatar__img"
+            src="assets/img/avatar.png"
+            alt="Avatar del autor" />
+        </div>
+        <p class="fudo-card-author__title">{{ article.author || 'Anónimo' }}</p>
+        <p class="fudo-card-author__description">
+          {{ article.publishedAt | date: 'dd/MM/yyyy' }}
+        </p>
+      </div>
+    </div>
+  </a>
+</article>

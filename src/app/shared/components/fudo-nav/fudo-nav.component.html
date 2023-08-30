@@ -1,5 +1,12 @@
-<nav>
-    <ul>
-        <li><a [routerLink]="'/news'">Noticias</a></li>
-    </ul>
+<nav role="navigation" class="fudo-nav">
+  <ul class="fudo-menu">
+    <li class="fudo-menu-list">
+      <a class="fudo-menu-list-link" [routerLink]="'/home'"
+        ><span class="fudo-menu-list-link__text">Home</span></a
+      >
+      <a class="fudo-menu-list-link" [routerLink]="'/news'"
+        ><span class="fudo-menu-list-link__text">Noticias</span></a
+      >
+    </li>
+  </ul>
 </nav>

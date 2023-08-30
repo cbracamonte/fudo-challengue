@@ -1,0 +1,78 @@
+@import 'components/card';
+@import 'abstracts/colors';
+@import 'abstracts/icons';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+%text-card {
+  font-family: 'Roboto-Bold';
+  font-size: 2.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+.fudo-card {
+  @include fudo-card();
+  &:hover {
+    transform: translateY(-7px);
+  }
+}
+
+.fudo-card-header {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+  &__image {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fudo-card-body {
+  margin-top: 2em;
+  &__title {
+    @extend %text-card;
+  }
+}
+
+.fudo-card-info {
+  margin-top: 1em;
+  &__text {
+    @extend %text-card;
+    font-size: 1em;
+    font-family: 'Roboto-Regular';
+  }
+}
+
+.fudo-card-author {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $color-white;
+  border-radius: 20px;
+  padding: 1em;
+  &__title {
+    font-family: 'Roboto-Bold';
+    font-size: 1em;
+  }
+  &__description {
+    font-family: 'Roboto-Bold';
+  }
+}
+
+.fudo-card-author-avatar {
+  &__img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+  }
+}

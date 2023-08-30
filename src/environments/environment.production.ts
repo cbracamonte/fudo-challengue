@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  // appName: import.meta.env.NG_APP_NAME,
-  // version: import.meta.env.NG_APP_VERSION,
-  // apiUrl: import.meta.env.NG_APP_API_URL,
+  url: 'https://newsapi.org/v2/top-headlines',
+  apiKey: '8ab9f6a80b5241b4ba7f0b3938ea683e',
 };

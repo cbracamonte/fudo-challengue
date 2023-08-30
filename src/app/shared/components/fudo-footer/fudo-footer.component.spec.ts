@@ -8,7 +8,7 @@ describe('FudoFooterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FudoFooterComponent]
+      declarations: [FudoFooterComponent],
     });
     fixture = TestBed.createComponent(FudoFooterComponent);
     component = fixture.componentInstance;

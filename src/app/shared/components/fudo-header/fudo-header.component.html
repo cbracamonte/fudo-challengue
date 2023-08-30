@@ -1,9 +1,22 @@
 <header class="fudo-header">
-    <section class="fudo-header-wrapper">
-        <div class="fudo-logo">
-            <img class="fudo-logo__img-logo" src="assets/logo/fudo.png" alt="fudo logo">
-        </div>
-        <app-fudo-nav></app-fudo-nav>
-    </section>
-
+  <section class="fudo-header-wrapper">
+    <button
+      class="fudo-header-menu-toggle"
+      type="button"
+      (click)="isOpenMenu = !isOpenMenu">
+      <i class="fudo-icon-bar"></i>
+    </button>
+    <div class="fudo-logo">
+      <a [routerLink]="'/'">
+        <img
+          class="fudo-logo__img-logo"
+          src="assets/logo/fudo.png"
+          alt="fudo logo" />
+      </a>
+    </div>
+    <app-fudo-nav></app-fudo-nav>
+  </section>
 </header>
+<app-fudo-nav-accordion
+  [isOpenMenu]="isOpenMenu"
+  (closeMenu)="isOpenMenu = $event"></app-fudo-nav-accordion>

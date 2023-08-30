@@ -1,0 +1,26 @@
+%fudo-icon-base {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.fudo-icon-home {
+  @extend %fudo-icon-base;
+  background-image: url('../../../src/assets/icons/home.svg');
+}
+
+.fudo-icon-newspaper {
+  @extend %fudo-icon-base;
+  background-image: url('../../../src/assets/icons/home.svg');
+}
+
+.fudo-icon-bar {
+  @extend %fudo-icon-base;
+  background-image: url('../../../src/assets/icons/bar.svg');
+}
+
+.fudo-icon-close {
+  @extend %fudo-icon-base;
+  background-image: url('../../../src/assets/icons/close.svg');
+}
