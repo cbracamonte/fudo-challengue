@@ -1,27 +1,79 @@
-# FudoChallengueHb
+# Fudo News Challengue
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Una app de noticias consumiendo el API <https://newsapi.org/>
 
-## Development server
+## Tabla de Contenidos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Introducción](#introducción)
+- [Características](#características)
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura de Archivos](#estructura-de-archivos)
+- [Contribución](#contribución)
 
-## Code scaffolding
+## Introducción
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Aplicación de noticias usando el API <https://newsapi.org/> mostrando las noticias en un card
 
-## Build
+## Características
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Diseño responsive
+- Angular 16
+- Standalone Components
+- Patron 7-1 Sass
+- BEM
+- Husky
+- git-cz
+- prettier & eslint
 
-## Running unit tests
+## Requisitos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Deben tener instalado:
 
-## Running end-to-end tests
+- Node.js (LTS) y npm instalados <https://nodejs.org/es/download>
+- Angular CLI instalado  <https://angular.io/cli>
+- Descargar su editor de código de preferencia, en este caso usaremos Visual Studio Code: <https://code.visualstudio.com/download>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalación
 
-## Further help
+1. Clona este repositorio `git clone https://github.com/cbracamonte/fudo-challengue` o descárgalo como archivo ZIP.
+2. Abre una terminal y navega al directorio del proyecto.
+3. Ejecuta `npm install` para instalar las dependencias.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+
+```bash
+npm run start
+```
+
+## Estructura de Archivos
+
+src/
+|-- app/
+|   |-- core/
+        | -- http
+        | -- interceptor
+|   |-- features/
+        | -- home
+        | -- news
+|   |-- shared/
+        | -- components
+|-- assets/
+|-- environments/
+|-- styles
+    |-- abstracts
+    |-- base
+    |-- components
+    |-- layout
+    |-- pages
+    |-- themes
+    |-- vendors
+
+## Contribución
+
+1. Haz un fork de este repositorio.
+2. Crea una rama nueva para tus cambios: `git checkout -b feature/nueva-caracteristica`.
+3. Haz tus cambios y realiza commits: `git commit -m 'Agrega nueva característica'`.
+4. Sube tus cambios a tu fork: `git push origin feature/nueva-caracteristica`.
+5. Abre un pull request en este repositorio.
